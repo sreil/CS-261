@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author: Sean Reilly
+** Date: June 26, 2015 CS-261
+** Description: Check to see if number is even or odd
+*********************************************************************/
+
 #include <stdlib.h>
 
 int main()
