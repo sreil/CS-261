@@ -1,7 +1,10 @@
 /*********************************************************************
+** Program Filename: Program 0
 ** Author: Sean Reilly
-** Date: June 26, 2015 CS-261
-** Description: Check to see if number is even or odd
+** Date: June 26, 2015
+** Description: Checks to see if a number is even or odd
+** Input: user inputs number
+** Output: odd or even
 *********************************************************************/
 
 #include <stdlib.h>
