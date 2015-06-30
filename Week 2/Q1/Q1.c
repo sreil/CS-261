@@ -2,9 +2,9 @@
 ** Program Filename: Q1.c
 ** Author: Sean Reilly
 ** Date: June 29, 2015
-** Description:  add
+** Description:  add here
 ** Input: none
-** Output: add
+** Output: add here
 *********************************************************************/
 
 #include <stdio.h>
