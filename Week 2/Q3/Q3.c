@@ -22,7 +22,7 @@ void sort(int* numbers, int n)
     {
         for (j = 0; j < i; j++)
         {
-            if (numbers[j] > numbers[j + 1])  // values out of order, so swap
+            if (numbers[j] > numbers[j + 1])
             {
                 temp = numbers[j];
                 numbers[j] = numbers[j + 1];
