@@ -3,8 +3,8 @@
 ** Author: Sean Reilly
 ** Date: July 1, 2015
 ** Description: Sorts a given array in ascending order
-** Input: user inputs string
-** Output: alternating upper and lowercase letters
+** Input: none
+** Output: Sorts a given array in ascending order
 *********************************************************************/
 
 
