@@ -21,16 +21,17 @@ void sort(struct student* students, int n) // The function prototype is void sor
     if(n == 0)
         return;
 
-    int i, j, temp;
+    int i, j;
+    struct student temp;
     for (i = n - 1; i > 0; i--)
     {
         for (j = 0; j < i; j++)
         {
-            if (numbers[j] > numbers[j + 1])
+            if (students[j].score > students[j + 1].score)
             {
-                temp = numbers[j];
-                numbers[j] = numbers[j + 1];
-                numbers[j + 1] = temp;
+                temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
             }
         }
     }
@@ -39,5 +40,8 @@ void sort(struct student* students, int n) // The function prototype is void sor
 
 int main()
 {
+
+    struct student *students = malloc(10*(sizeof(struct student)));
+
     return 0;
 }
