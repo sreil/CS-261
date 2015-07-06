@@ -2,9 +2,9 @@
 ** Program Filename: Q1.c
 ** Author: Sean Reilly
 ** Date: June 29, 2015
-** Description:  add here
+** Description:  allocates memory for 10 students, generates random ids and scores
 ** Input: none
-** Output: add here
+** Output: prints ids and scores
 *********************************************************************/
 
 #include <stdio.h>
