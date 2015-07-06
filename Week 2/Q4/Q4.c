@@ -20,7 +20,7 @@ void sort(struct student* students, int n)
 	int i, j;
 	struct student temp;
 
-	for (i = 0; i< n - 1; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		for (j = 0; j < n - 1 - i; j++)
 		{
@@ -42,7 +42,7 @@ int main()
 
     srand(time(NULL)); //random numbers and ID's
 
-    for(i = 0; i<n; i++)
+    for(i = 0; i < n; i++)
     {
         students[i].id = i+1;
     }
@@ -55,7 +55,7 @@ int main()
 
     printf("Sorted ID's and scores are as follows:\n");
 
-    for(i=0; i<n; i++)
+    for(i = 0; i < n; i++)
 	{
         printf("ID: %d \t\tScore: %d\n", students[i].id, students[i].score);
     }
