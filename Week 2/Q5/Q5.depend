@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1435799088 source:e:\osu\cs-261\week 2\q5\q5.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+

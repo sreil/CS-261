@@ -36,6 +36,6 @@ int main()
     char convert[max];
     scanf("%s", convert);
     sticky(convert);
-    printf("%s\n", convert);
+    printf("%s", convert);
     return 0;
 }
