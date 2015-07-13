@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1436750397 source:e:\osu\cs-261\week 3\assignment 2\calc.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"dynamicArray.h"
+
+1436750255 e:\osu\cs-261\week 3\assignment 2\dynamicarray.h
+	<math.h>
+
