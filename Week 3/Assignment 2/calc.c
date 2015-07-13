@@ -317,7 +317,7 @@ double calculate(int numInputTokens, char **inputString)
 				}
 				else
 				{
-					printf("Invalid number: %s\n", s);
+					printf("Number is invalid %s\n", s);
 				}
 			}
 		}
@@ -334,12 +334,12 @@ double calculate(int numInputTokens, char **inputString)
 
 	if (finalStackSize != 0)
 	{
-		printf("Error! The following items were left on calculation stack after popping assumed result: ");
+		printf("Sorry, but the following items were left on calculation stack: ");
 
 		for (i = 0; i < finalStackSize; i++)
 			printf("%f ", getDynArr(stack, i));
 
-		printf("\nDid you forget an operator?\n");
+		printf("Missing an operator?\n");
 		deleteDynArr(stack);
 	}
 
