@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: cirListDeque.c
+** Author: Given file/Sean Reilly
+** Date: July 17, 2015
+** Description: class file for cir list deque
+** Input: none
+** Output: none
+*********************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>

@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: cirListDeque.h
+** Author: Given file
+** Date: July 17, 2015
+** Description: header file
+** Input: none
+** Output: none
+*********************************************************************/
+
 #ifndef CIRLISTDEQUE_H_INCLUDED
 #define CIRLISTDEQUE_H_INCLUDED
 
