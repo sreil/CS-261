@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: dynamicArrayMain.h
+** Author: Given file
+** Date: July 18, 2015
+** Description: Main file for dynamic array
+** Input: none
+** Output: none
+*********************************************************************/
+
 #include "dynamicArray.h"
 #include <stdio.h>
 #include <time.h>

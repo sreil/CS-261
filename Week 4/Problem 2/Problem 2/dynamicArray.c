@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: dynamicArray.c
+** Author: Given file/Sean Reilly
+** Date: July 19, 2015
+** Description: dynamic array
+** Input: none
+** Output: none
+*********************************************************************/
+
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -9,7 +18,6 @@ struct DynArr
 	int size;		/* Number of elements in the array */
 	int capacity;	/* capacity ofthe array */
 };
-
 
 /* ************************************************************************
 	Dynamic Array Functions
@@ -86,16 +94,12 @@ void deleteDynArr(DynArr *v)
 */
 void _dynArrSetCapacity(DynArr *v, int newCap)
 {
-	/* FIXME: You will write this function */
-	//create the new array
 	TYPE* newData = malloc(sizeof(TYPE) * newCap);
 	assert(newData != 0);
 
-	//move all of the elements over to the new array
 	for(int i = 0; i < v->size; i++){
 		newData[i] = v->data[i];
 	}
-	//update the pointer to the array and the capacity
 	free(v->data);
 	v->data = newData;
 	v-> capacity = newCap;
@@ -122,8 +126,6 @@ int sizeDynArr(DynArr *v)
 */
 void addDynArr(DynArr *v, TYPE val)
 {
-	/* FIXME: You will write this function */
-	/* Check to see if a resize is necessary */
 	if(sizeDynArr(v) >= v->capacity)
 		_dynArrSetCapacity(v, 2 * v->capacity);
 
@@ -146,7 +148,6 @@ void addDynArr(DynArr *v, TYPE val)
 */
 TYPE getDynArr(DynArr *v, int pos)
 {
-	/* FIXME: You will write this function */
 	assert(v != 0);
 	assert(pos < v->size);
 	assert(pos >=0);
@@ -166,12 +167,10 @@ TYPE getDynArr(DynArr *v, int pos)
 */
 void putDynArr(DynArr *da, int pos, TYPE val)
 {
-	/* FIXME: You will write this function */
 	assert(da != 0);
 	assert(pos < da->size);
 	assert(pos >=0);
 
-	//insert the new element
 	da->data[pos] = val;
 
 }
@@ -187,7 +186,6 @@ void putDynArr(DynArr *da, int pos, TYPE val)
 */
 void swapDynArr(DynArr *da, int i, int  j)
 {
-	/* FIXME: You will write this function */
 	assert(da != 0);
 	assert(i < da->size);
 	assert(i >=0);
@@ -195,8 +193,6 @@ void swapDynArr(DynArr *da, int i, int  j)
 	assert(j >=0);
 
 	TYPE temp;
-
-	//swap the elements
 	temp = da->data[i];
 	da->data[i] = da->data[j];
 	da->data[j] = temp;
@@ -214,17 +210,13 @@ void swapDynArr(DynArr *da, int i, int  j)
 */
 void removeAtDynArr(DynArr *da, int idx)
 {
-	/* FIXME: You will write this function */
 	assert(da != 0);
 	assert(idx < da->size);
 	assert(idx >= 0);
 
-	//move all of the elements after index up 1
 	for(int i = idx; i < da->size - 1; i++){
 		da->data[i] = da->data[i+1];
 	}
-
-	//decrease the size
 	da->size--;
 }
 
@@ -242,8 +234,6 @@ void removeAtDynArr(DynArr *da, int idx)
 */
 int isEmptyDynArr(DynArr *v)
 {
-	/* FIXME: You will write this function */
-	//if the size is zero, return 1, otherwise, return 0
 	if(sizeDynArr(v) == 0)
 		return 1;
 
@@ -260,7 +250,6 @@ int isEmptyDynArr(DynArr *v)
 */
 void pushDynArr(DynArr *v, TYPE val)
 {
-	/* FIXME: You will write this function */
 	addDynArr(v, val);
 }
 
@@ -272,8 +261,6 @@ void pushDynArr(DynArr *v, TYPE val)
 */
 TYPE topDynArr(DynArr *da)
 {
-	/* FIXME: You will write this function */
-	//Our position is 0 indexed...
 	int arrGetPos = da->size - 1;
 	assert(arrGetPos >= 0);
 	return getDynArr(da, arrGetPos);
@@ -288,7 +275,6 @@ TYPE topDynArr(DynArr *da)
 */
 void popDynArr(DynArr *da)
 {
-	/* FIXME: You will write this function */
 	int arrGetPos = da->size - 1;
 
 	assert(arrGetPos >= 0);
@@ -312,7 +298,6 @@ void popDynArr(DynArr *da)
 */
 int containsDynArr(DynArr *da, TYPE val)
 {
-	/* FIXME: You will write this function */
 	assert(da != 0);
 
     	int i;
@@ -335,11 +320,11 @@ int containsDynArr(DynArr *da, TYPE val)
 */
 void removeDynArr(DynArr *da, TYPE val)
 {
-	/* FIXME: You will write this function */
    int i;
 
    for (i = 0; i < da->size; i++) {
-      if (da->data[i]==val) { /* found it */
+      if (da->data[i]==val)
+      {
          removeAtDynArr(da, i);
          return;
       }

@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: dynamicArrayMain.h
+** Author: Given file
+** Date: July 18, 2015
+** Description: Header for dynamic array.c
+** Input: none
+** Output: none
+*********************************************************************/
+
 #ifndef DYNAMICARRAY_H_INCLUDED
 #define DYNAMICARRAY_H_INCLUDED
 
@@ -15,10 +24,7 @@
 # define EQ(A, B) ((A) == (B))
 # endif
 
-
-
 typedef struct DynArr DynArr;
-
 
 /* Dynamic Array Functions */
 DynArr *createDynArr(int cap);
