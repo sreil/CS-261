@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1437275916 source:e:\osu\cs-261\week 4\problem 1\problem 1\linkedlistmain.c
+	"linkedList.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1437275793 e:\osu\cs-261\week 4\problem 1\problem 1\linkedlist.h
+
