@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: linkedList.c
+** Author: Sean Reilly
+** Date: July 19, 2015
+** Description: Class for linked list
+** Input:
+** Output:
+*********************************************************************/
+
 #include "linkedList.h"
 #include <assert.h>
 #include <stdlib.h>
@@ -27,7 +36,6 @@ struct linkedList{
 */
 
 void _initList (struct linkedList *lst) {
-  /* FIXME: you must write this */
     assert(lst != NULL);
     lst->size = 0;
 	struct DLink * first = malloc(sizeof(struct DLink));
@@ -70,7 +78,6 @@ struct linkedList *createLinkedList()
 
 void _addLinkBefore(struct linkedList *lst, struct DLink *l, TYPE v)
 {
-	/* FIXME: you must write this */
     assert(lst != NULL&& l != NULL);
     struct DLink *add = (struct DLink *)malloc(sizeof(struct DLink));
     add->value = v;
@@ -95,8 +102,6 @@ void _addLinkBefore(struct linkedList *lst, struct DLink *l, TYPE v)
 
 void addFrontList(struct linkedList *lst, TYPE e)
 {
-
-	/* FIXME: you must write this */
     assert(lst != NULL);
     struct DLink * add = malloc(sizeof (struct DLink));
     add->value = e;
@@ -119,8 +124,6 @@ void addFrontList(struct linkedList *lst, TYPE e)
 */
 
 void addBackList(struct linkedList *lst, TYPE e) {
-
-	/* FIXME: you must write this */
     assert(lst != NULL);
     struct DLink*add = malloc(sizeof (struct DLink));
     add->value = e;
@@ -142,10 +145,8 @@ void addBackList(struct linkedList *lst, TYPE e) {
 */
 
 TYPE frontList (struct linkedList *lst) {
-	/* FIXME: you must write this */
     assert(lst != NULL&& lst->size != 0);
-	/*temporary return value...you may need to change this */
-    return lst->firstLink->next->value;
+    return lst->firstLink->next->value; //changed from return(1)
 }
 
 /*
@@ -158,10 +159,8 @@ TYPE frontList (struct linkedList *lst) {
 
 TYPE backList(struct linkedList *lst)
 {
-	/* FIXME: you must write this */
     assert(lst->size != 0 && lst != NULL);
-	/*temporary return value...you may need to change this */
-	return lst->lastLink->prev->value;
+	return lst->lastLink->prev->value; //changed from return(1)
 }
 
 /*
@@ -175,14 +174,11 @@ TYPE backList(struct linkedList *lst)
 
 void _removeLink(struct linkedList *lst, struct DLink *l)
 {
-
-	/* FIXME: you must write this */
     assert(l != NULL && lst != NULL);
     l->prev->next = l->next;
     l->next->prev = l->prev;
     lst->size--;
         free(l);
-
 }
 
 /*
@@ -194,7 +190,6 @@ void _removeLink(struct linkedList *lst, struct DLink *l)
 */
 
 void removeFrontList(struct linkedList *lst) {
-   	/* FIXME: you must write this */
     assert(lst != NULL);
     struct DLink *needMove = lst->firstLink->next;
     lst->firstLink->next = needMove->next;
@@ -213,7 +208,6 @@ void removeFrontList(struct linkedList *lst) {
 
 void removeBackList(struct linkedList *lst)
 {
-	/* FIXME: you must write this */
     assert(lst != NULL);
     struct DLink *needMove = lst ->lastLink->prev;
     lst->lastLink->prev = needMove->prev;
@@ -229,8 +223,6 @@ void removeBackList(struct linkedList *lst)
 */
 
 int isEmptyList(struct linkedList *lst) {
- 	/* FIXME: you must write this */
-	/*temporary return value...you may need to change this */
     if (lst->size == 0)
         return 1;
     else
@@ -244,7 +236,6 @@ int isEmptyList(struct linkedList *lst) {
  */
 void _printList(struct linkedList* lst)
 {
-	/* FIXME: you must write this */
     assert(lst != NULL);
     struct DLink* current = lst->firstLink->next;
     do{
@@ -263,13 +254,8 @@ void _printList(struct linkedList* lst)
  */
 void addList(struct linkedList *lst, TYPE v)
 {
-	/* FIXME: you must write this */
     assert(lst != NULL);
-
-        addFrontList(lst, v);
-
-
-
+    addFrontList(lst, v);
 }
 
 /*	Returns boolean (encoded as an int) demonstrating whether or not
@@ -283,8 +269,6 @@ void addList(struct linkedList *lst, TYPE v)
 	post:	no changes to the bag
 */
 int containsList (struct linkedList *lst, TYPE e) {
-	/* FIXME: you must write this */
-	/*temporary return value...you may need to change this */
     assert(lst->size != 0 && lst != NULL);
     struct DLink* current = lst->firstLink->next;
     do{
@@ -306,7 +290,6 @@ int containsList (struct linkedList *lst, TYPE e) {
 	post:	size of the bag is reduced by 1
 */
 void removeList (struct linkedList *lst, TYPE e) {
-	/* FIXME: you must write this */
     assert(lst != NULL && lst->size != 0);
     struct DLink* current = lst->firstLink;
     do{
@@ -316,6 +299,4 @@ void removeList (struct linkedList *lst, TYPE e) {
     {
         _removeLink(lst, current);
     }
-
-
 }

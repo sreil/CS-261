@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: linkedListMain.c
+** Author: Given file
+** Date: July 20, 2015
+** Description: Linked lists
+** Input:
+** Output:
+*********************************************************************/
+
+
 #include "linkedList.h"
 #include <stdio.h>
 #include <time.h>

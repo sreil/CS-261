@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: linkedList.h
+** Author: Sean Reilly/Given file
+** Date: July 18, 2015
+** Description: Header for linked list
+** Input: none
+** Output: none
+*********************************************************************/
+
+
 #ifndef LINKEDLIST_H_INCLUDED
 #define LINKEDLIST_H_INCLUDED
 
