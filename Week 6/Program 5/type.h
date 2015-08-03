@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: bst.c
+** Author: Given file
+** Date: July 29, 2015
+** Description: type header, unchanged
+** Input: none
+** Output:
+*********************************************************************/
+
+
 /* You can modify the structure to store whatever you'd like in your dynamic array.
 We define struct Task for the to-do list application in this example */
 
