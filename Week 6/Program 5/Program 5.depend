@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1438439443 source:e:\osu\cs-261\week 6\program 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"toDoList.h"
+
+1438630400 e:\osu\cs-261\week 6\program 5\todolist.h
+	"dynamicArray.h"
+	"type.h"
+
+1438630400 e:\osu\cs-261\week 6\program 5\dynamicarray.h
+	"type.h"
+
+1438630400 e:\osu\cs-261\week 6\program 5\type.h
+
