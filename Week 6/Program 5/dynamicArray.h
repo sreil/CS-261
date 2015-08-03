@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program Filename: bst.c
+** Program Filename: dynamicArray.h
 ** Author: Given file
 ** Date: July 29, 2015
 ** Description: header for dynamicarray.c
