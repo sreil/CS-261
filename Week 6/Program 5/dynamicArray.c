@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: bst.c
+** Author: Given file/Sean Reilly
+** Date: July 30, 2015
+** Description: tests dynamic arrays / heaps
+** Input: none
+** Output:
+*********************************************************************/
+
+
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
