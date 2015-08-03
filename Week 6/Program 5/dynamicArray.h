@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: bst.c
+** Author: Given file
+** Date: July 29, 2015
+** Description: header for dynamicarray.c
+** Input: none
+** Output:
+*********************************************************************/
+
+
 /* 	dynArr.h : Dynamic Array implementation. */
 #ifndef DYNAMIC_ARRAY_INCLUDED
 #define DYNAMIC_ARRAY_INCLUDED 1
