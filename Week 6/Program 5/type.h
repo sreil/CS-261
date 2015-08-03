@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program Filename: bst.c
+** Program Filename: type.h
 ** Author: Given file
 ** Date: July 29, 2015
 ** Description: type header, unchanged
