@@ -1,5 +1,5 @@
 /*********************************************************************
-** Program Filename: bst.c
+** Program Filename: dynamicArray.c
 ** Author: Given file/Sean Reilly
 ** Date: July 30, 2015
 ** Description: tests dynamic arrays / heaps
