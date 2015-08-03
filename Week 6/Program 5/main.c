@@ -1,3 +1,13 @@
+/*********************************************************************
+** Program Filename: main.c
+** Author: Given file
+** Date: July 29, 2015
+** Description: tests functions
+** Input: none
+** Output:
+*********************************************************************/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
