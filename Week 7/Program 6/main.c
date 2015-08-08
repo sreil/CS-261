@@ -43,6 +43,50 @@ int main (int argc, const char * argv[]) {
 
     /*... concordance code goes here ...*/
 
+    FILE *input = fopen(filename, "r");
+
+	if (!input)
+	{
+		printf("Cannot not open input file\n");
+	}
+
+	char *key = getWord(input);
+
+	printf("Input file: ");
+
+
+	while (key != 0)
+	{
+		printf(" %s", key);
+
+		if (containsKey(hashTable, key) == 0)
+		{
+			insertMap(hashTable, key, 1);
+		}
+		else
+		{
+			(*atMap(hashTable, key))++;
+			free(key);
+		}
+
+		key = 0;
+		key = getWord(input);
+	}
+
+	printf("\n\n");
+
+	for (int i = 0; i < hashTable -> tableSize; i++)
+	{
+
+		hashLink *current = hashTable -> table[i];
+
+		while (current != 0)
+		{
+			printf("%s: %d\n", current -> key, current -> value);
+			current = current -> next;
+		}
+	}
+
 	/*... concordance code ends here ...*/
 
 	printMap(hashTable);
