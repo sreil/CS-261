@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: spellcheck.c
+** Author: Given file/Sean Reilly
+** Date: August 8, 2015
+** Description: see below
+** Input: none
+** Output:
+*********************************************************************/
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>

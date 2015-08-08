@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: main.c
+** Author: Given file/Sean Reilly
+** Date: August 5, 2015
+** Description: main for hashmap and spellcheck
+** Input: none
+** Output:
+*********************************************************************/
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>

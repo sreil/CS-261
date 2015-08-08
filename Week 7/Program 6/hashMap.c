@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: hashMap.c
+** Author: Given file/Sean Reilly
+** Date: August 8, 2015
+** Description: hashing functions
+** Input: none
+** Output:
+*********************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

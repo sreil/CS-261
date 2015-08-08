@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: hashMap.h
+** Author: Given file
+** Date: July 29, 2015
+** Description: header for hashMap.c
+** Input: none
+** Output:
+*********************************************************************/
+
 # ifndef HashMap
 # define HashMap
 
