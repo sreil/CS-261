@@ -45,6 +45,15 @@ int main (int argc, const char * argv[]) {
       ... You write this               ...
     */
 
+    if (!containsKey(hashTable, word))
+	{
+		printf("Invalid.  %s is not a word\n", word);
+	}
+	else
+	{
+		printf("%s is spelled correctly \n", word);
+	}
+
     /* Don't remove this. It is used for grading*/
     if(strcmp(word,"quit")==0)
       quit=!quit;
@@ -57,6 +66,18 @@ int main (int argc, const char * argv[]) {
 void loadDictionary(FILE* file, struct hashMap* ht)
 {
   /* You will write this*/
+    file = fopen("dictionary.txt", "r");
+
+    while (!feof(file))
+    {
+        char *word = getWord(file);
+        if (word)
+        {
+            insertMap(ht, word, 1);
+        }
+    }
+    fclose(file);
+
 }
 
 char* getWord(FILE *file)
