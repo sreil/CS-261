@@ -131,7 +131,48 @@ void _setTableSize(struct hashMap * ht, int newTableSize)
  */
 void insertMap (struct hashMap * ht, KeyType k, ValueType v)
 {
-	/*write this*/
+    int index;
+
+    if(tableLoad(ht) >= LOAD_FACTOR_THRESHOLD)
+    {
+        _setTableSize(ht, (2 * ht -> tableSize));
+    }
+
+    struct hashLink *link = malloc(sizeof(struct hashLink));
+
+    index = stringHash2(k) % ht -> tableSize;
+
+    if(index < 0)
+    {
+        index += ht -> tableSize;
+    }
+
+    assert(link);
+    link -> next = 0;
+    link -> key = k;
+    link -> value = v;
+
+    if(containsKey(ht, k))
+    {
+        removeKey(ht, k);
+    }
+
+    if(!ht -> table[index])
+    {
+        ht -> table[index] = link;
+    }
+    else
+    {
+        struct hashLink *current = ht -> table[index];
+
+        while(current -> next)
+        {
+            current = current -> next;
+        }
+        current -> next = link;
+    }
+
+    ht -> count++;
 }
 
 /*
@@ -144,17 +185,49 @@ void insertMap (struct hashMap * ht, KeyType k, ValueType v)
  */
 ValueType* atMap (struct hashMap * ht, KeyType k)
 {
-	/*write this*/
-	return NULL;
-}
+    int index;
+    index = stringHash2(k) % ht -> tableSize;
 
+    if(index < 0)
+    {
+        index += ht -> tableSize;
+    }
+
+    struct hashLink *current = ht -> table[index];
+
+    while(strcmp(current -> key, k) != 0)
+    {
+        current = current -> next;
+    }
+
+    return &current -> value;
+}
 /*
  a simple yes/no if the key is in the hashtable.
  0 is no, all other values are yes.
  */
 int containsKey (struct hashMap * ht, KeyType k)
 {
-	/*write this*/
+    int index;
+    index = stringHash2(k) % ht -> tableSize;
+
+    if(index < 0)
+    {
+        index += ht -> tableSize;
+    }
+
+    struct hashLink *current = ht -> table[index];
+
+    while(current)
+    {
+        if(strcmp(current -> key, k) == 0)
+        {
+            return 1;
+        }
+
+        current = current -> next;
+    }
+
 	return 0;
 }
 
@@ -166,7 +239,32 @@ int containsKey (struct hashMap * ht, KeyType k)
  */
 void removeKey (struct hashMap * ht, KeyType k)
 {
-	/*write this*/
+	int index;
+    index = stringHash2(k) % ht -> tableSize;
+
+	if (index < 0)
+	{
+		index += ht -> tableSize;
+	}
+
+	struct hashLink *current = ht -> table[index];
+
+	struct hashLink *previous = ht -> table[index];
+
+	while (current != 0)
+	{
+		if (current -> key == k)
+		{
+			previous -> next = current -> next;
+
+			free(current);
+
+			return;
+		}
+
+		previous = current;
+		current = current -> next;
+	}
 }
 
 /*
@@ -175,7 +273,7 @@ void removeKey (struct hashMap * ht, KeyType k)
 int size (struct hashMap *ht)
 {
 	/*write this*/
-	return 0;
+	return ht -> count;
 
 }
 
@@ -185,7 +283,7 @@ int size (struct hashMap *ht)
 int capacity(struct hashMap *ht)
 {
 	/*write this*/
-	return 0;
+	return ht -> tableSize;
 }
 
 /*
@@ -194,8 +292,18 @@ int capacity(struct hashMap *ht)
  */
 int emptyBuckets(struct hashMap *ht)
 {
-	/*write this*/
-	return 0;
+    int empty;
+    empty = 0;
+
+    for (int i = 0; i < ht -> tableSize; i++)
+    {
+        if (ht -> table[i] == 0)
+        {
+            empty++;
+        }
+    }
+
+    return empty;
 }
 
 /*
@@ -207,8 +315,9 @@ int emptyBuckets(struct hashMap *ht)
  */
 float tableLoad(struct hashMap *ht)
 {
-	/*write this*/
-	return 0;
+	float load;
+    load = (float)size(ht) / capacity(ht);
+	return load;
 }
 void printMap (struct hashMap * ht)
 {
