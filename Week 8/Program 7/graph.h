@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: graph.h
+** Author: Given file
+** Date: August 10, 2015
+** Description: header for graph
+** Input: none
+** Output: none
+*********************************************************************/
+
 #ifndef GRAPH_DEFINED
 #define GRAPH_DEFINED 1
 
