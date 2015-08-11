@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: main.c
+** Author: Given file
+** Date: August 10, 2015
+** Description: main file
+** Input: none
+** Output:
+*********************************************************************/
+
 #include <stdio.h>
 #include "graph.h"
 
