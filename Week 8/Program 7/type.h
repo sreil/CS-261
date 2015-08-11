@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: type.h
+** Author: Given file
+** Date: August 10, 2015
+** Description: header type
+** Input: none
+** Output: none
+*********************************************************************/
+
 /*	type.h
 
 	Defines the type to be stored in the data structure.  These macros
