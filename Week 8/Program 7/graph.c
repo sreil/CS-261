@@ -222,7 +222,41 @@ int DFSRecursive(Graph* g, Vertex* source, Vertex* destination)
  */
 int DFS(Graph* g, Vertex* source, Vertex* destination)
 {
-	/* FIXME you will write this */
+	if (source == destination)
+		return 1;
+
+	struct Vertex *temp = source;
+
+    struct cirListDeque *stack = malloc(sizeof(struct cirListDeque));
+
+    initCirListDeque(stack);
+    clearVisited(g);
+    addFrontCirListDeque(stack, temp);
+
+    while(!isEmptyCirListDeque(stack))
+    {
+        temp = frontCirListDeque(stack);
+        removeFrontCirListDeque(stack);
+
+        if(!temp -> isVisited)
+        {
+            temp -> isVisited = 1;
+        }
+
+        if(temp == destination)
+        {
+            return 1;
+        }
+
+        for(int i = 0; i < temp -> numNeighbors; i++)
+        {
+            if(!temp -> neighbors[i] -> isVisited)
+            {
+                addFrontCirListDeque(stack, temp -> neighbors[i]);
+            }
+        }
+    }
+
 	return 0;
 }
 
