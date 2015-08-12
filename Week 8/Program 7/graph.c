@@ -1,3 +1,12 @@
+/*********************************************************************
+** Program Filename: graph.c
+** Author: Given file/Sean Reilly
+** Date: August 11, 2015
+** Description: creates graphs
+** Input: none
+** Output: none
+*********************************************************************/
+
 #include "graph.h"
 
 #include <stdlib.h>
