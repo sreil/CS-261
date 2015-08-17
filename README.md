@@ -11,3 +11,7 @@ Program 3: 90/110
 Program 4: 95/100
 
 Program 5: 66/66
+
+Program 6: 80/100
+
+Program 7: 75/75
